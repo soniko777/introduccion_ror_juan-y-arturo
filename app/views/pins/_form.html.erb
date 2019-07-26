@@ -12,20 +12,30 @@
 <% end %>
 
 <div class="form-group">
+    <div class="field">
+      <%= form.label :nombre, "Nombre" %>
+      <%= form.text_field :nombre, :class => 'form-control'%>
+      
+    </div>
+  </div>
+
+<div class="form-group">
   <div class="field">
-    <%= form.label :photo %>
+    <%= form.label :photo, "Photo" %>
     <%= form.text_field :photo, :class => 'form-control' %>
   </div>
 </div>
 
+
+
 <div class="form-group">
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, :class => 'form-control'%>
+    <%= form.label :description, "Description" %>
+    <%= form.text_area :description, :class => 'form-control'%>
   </div>
 </div>
 
 <div class="actions">
-  <%= form.submit %>
+  <%= form.submit "Crear"%>
 </div>
 <% end %>
