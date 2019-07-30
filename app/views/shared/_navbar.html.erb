@@ -13,11 +13,7 @@
       <li class="nav-item">
         <a class="nav-link" href="<%= pins_path %>">Pins</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-      </li> 
+      
       <ul class="nav navbar-nav navbar-right">
         <% if current_user.nil? %>
         <a class="nav-link" href="<%= new_user_registration_path %>">Registro</a>
