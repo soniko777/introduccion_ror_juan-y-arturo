@@ -1,7 +1,8 @@
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:index, :show]
- def mypins
+ 
+  def mypins
   @pins = current_user.pins
  end
  

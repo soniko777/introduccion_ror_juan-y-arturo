@@ -1,16 +1,22 @@
-div class="container">
+<div class="container">
+   
 
   <%= link_to 'New Pin', new_pin_path %>
 
-  <h1>Listing Pins</h1>
+  <h1>My Pins</h1>
 
+  
   <% @pins.each do |pin| %>
 
   <div class="col-md-3">
     <div class="img-thumbnail">
+      
       <%= pin.name %>
-      <%= image_tag(pin.photo, :class => 'img-responsive') %>
+      <%= image_tag(pin.photo, :class => 'img-responsive')
+       %>
       <%= pin.description %>
+
+      
 
       <div class="buttons" style="margin-top: 10px; margin-bottom:10px">
         <%= link_to 'Show', pin, :class => 'btn' %>
