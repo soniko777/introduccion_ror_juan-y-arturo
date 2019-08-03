@@ -1,9 +1,9 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark ">
   <a class="navbar-brand" href="welcome/index">Mi Pinterest
-  <span class="glyphicon glyphicon-cd" style="font-size: 25px"></span>
+    <span class="glyphicon glyphicon-cd" style="font-size: 25px"></span>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -11,30 +11,37 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Nosotros <span class="sr-only">(current)</span></a>
-<li><a href="<%=mypins_path%>">Mis Pins</li>
-        </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<%= pins_path %>">Pins</a>
-      </li>
-      </div>
-      
-      <ul class="nav navbar-nav navbar-right">
+
         
-        <% if current_user.nil? %>
-        <li> <a href="<%= new_user_session_path%>">Igreso
-          <span class="glyphicon glyphicon-piggy-bank"></span>
-        </a> </li>
-        <li><a href="<%= new_user_registration_path %>">Registro
-          <span class="glyphicon glyphicon-user"></span>
-        </a></li>
-  
-       
-    
-     <% else %>
-     <li><a href="<%=  destroy_user_session_path%>" data-method="delete">Salir</a>
+      <li class="nav-item">
+        <a class="nav-link" href="<%=mypins_path%>">Mis Pins</a>
       </li>
-    <% end %>  
+
+      <li class="nav-item">
+        <a class="nav-link" href="<%=pins_path %>">Pins</a>
+      </li>
     </ul>
-    </nav>
+  </div>
+
+
+  <ul class="nav navbar-nav navbar-right">
+
+    <% if current_user.nil? %>
+    <li> <a href="<%= new_user_session_path%>">Igreso
+        <span class="glyphicon glyphicon-piggy-bank"></span>
+      </a> </li>
+    <li><a href="<%= new_user_registration_path %>">Registro
+        <span class="glyphicon glyphicon-user"></span>
+      </a></li>
+
+
+
+    <% else %>
+    <li><a href="<%=  destroy_user_session_path%>" data-method="delete">Salir</a>
+    </li>
+    <% end %>
+  </ul>
+
   </div>
   </div>
+</nav>
