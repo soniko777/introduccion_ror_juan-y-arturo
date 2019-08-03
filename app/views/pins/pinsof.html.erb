@@ -1,33 +1,16 @@
 <div class="container">
-<<<<<<< HEAD
 
   <%= link_to 'New Pin', new_pin_path %>
 
   <h1>Mis Pins</h1>
-=======
-   
 
-  <%= link_to 'New Pin', new_pin_path %>
-
-  <h1>My Pins</h1>
->>>>>>> f27f8da94f42b09da70f1e4eb5615db122c3bbe5
-
-  
   <% @pins.each do |pin| %>
 
   <div class="col-md-3">
     <div class="img-thumbnail">
-      
       <%= pin.name %>
-<<<<<<< HEAD
-      <%= image_tag pin.photo, :class => 'img-responsive' %>
-=======
-      <%= image_tag(pin.photo, :class => 'img-responsive')
-       %>
->>>>>>> f27f8da94f42b09da70f1e4eb5615db122c3bbe5
+      <%= image_tag(pin.photo, :class => 'img-responsive') %>
       <%= pin.description %>
-
-      
 
       <div class="buttons" style="margin-top: 10px; margin-bottom:10px">
         <%= link_to 'Show', pin, :class => 'btn' %>
