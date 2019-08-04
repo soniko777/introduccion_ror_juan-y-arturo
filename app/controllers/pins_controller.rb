@@ -17,7 +17,11 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all
+    if params[:q].present?
+      @pins = Pin.where('name like ?', "%#{params[:q]}%")
+    else
+      @pins = Pin.all
+    end
   end
 
   # GET /pins/1
